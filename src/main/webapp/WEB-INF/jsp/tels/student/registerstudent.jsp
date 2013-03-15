@@ -1,4 +1,4 @@
-<%@ include file="include.jsp"%>
+﻿<%@ include file="include.jsp"%>
 
 <!-- $Id: registerstudent.jsp 989 2007-08-30 01:15:54Z MattFish $ -->
 
@@ -26,10 +26,10 @@ function findPeriods() {
 		  	// or "1,2,3,4,5,...", a comma-separated values of period names
 		  	var responseText = o;
 		  	if (responseText == "not found" || responseText.length < 2) {
-		  		alert("The Access Code is invalid. Please talk with your teacher");
+		  		alert("授權碼無效，請詢問您的教師。");
 		  	} else {
 			  	var op = document.createElement('option');
-			  	op.appendChild(document.createTextNode("Select your class period..."));
+			  	op.appendChild(document.createTextNode("選擇您的班級..."));
 			  	op.value = 'none';
   				periodSelect.appendChild(op);
 			  	
@@ -58,7 +58,7 @@ function findPeriods() {
 			error:failureCallback
 		});
 	} else {
-		alert("Please enter an access code. Get this from your teacher.");
+		alert("輸入授權碼，請詢問您的教師。");
 	}
 }
 
@@ -155,32 +155,36 @@ function checkForExistingAccounts() {
 
 	return existingAccounts;
 }
-
+//Modified by Richard 2012/2/13
 function createAccount() {
 	var runcode = document.getElementById("runCode_part1").value;
 	var period = document.getElementById("runCode_part2").value;
 	var firstname = document.getElementById("firstname").value;
-	var lastname = document.getElementById("lastname").value;
-	
+	var lastname = document.getElementById("lastname").value; 
+	/*
 	if(!/^[a-zA-Z]*$/.test(firstname)) {
 		//first name contains characters that are not letters
 		alert('First Name can only contain letters');
-	} else if(!/^[a-zA-Z]*$/.test(lastname)) {
+	} 
+	
+	if(!/^[a-zA-Z]*$/.test(lastname)) {
 		//last name contains characters that are not letters
 		alert('Last Name can only contain letters');
-	} else if (runcode == null || runcode == "") {
-		alert('Please enter project code');		
+	}
+	*/
+    if (runcode == null || runcode == "") {
+		alert('請輸入專題授權碼');		
 			var periodSelect = document.getElementById("runCode_part2");
 			periodSelect.innerHTML = "";
 	  		periodSelect.disabled = true;
 	} else if ((period != null && period == "none") || period == null || period == "") {
-		alert('Please click SHOW CLASS PERIODS. Then select a period from the menu.');
+		alert('請點選顯示班級然後選擇您的班級');
 	} else if (runcode != null && period != null && period != "none") {
 		var projectCode = document.getElementById("projectCode");
 		projectCode.value = runcode + "-" + period;
 		document.getElementById("studentRegForm").submit();		
 	} else {
-		alert('Invalid project code. Please talk to your teacher');
+		alert('專題授權碼無效，請告知您的教師。');
 	}
 }
 
@@ -229,7 +233,7 @@ function setup() {
 						    	<span class="hint"><spring:message code="student.registerstudent.5"/><span class="hint-pointer"></span></span> 
 					   		</td>
 					   	</tr>
-					
+					     <!-- Modified by Richard 2012/2/13 -->
 					  	<tr>
 					  		<td><label for="studentLastName"><spring:message code="student.registerstudent.6"/></label></td>
 							<td><form:input path="userDetails.lastname" id="lastname" size="25" maxlength="25" tabindex="2"/>
@@ -237,7 +241,7 @@ function setup() {
 						    	<span class="hint"><spring:message code="student.registerstudent.7"/><span class="hint-pointer"></span></span> 
 						   	</td>
 						</tr>
-					            
+					      
 					  	<tr>
 					  		<td><label for="studentGender"><spring:message code="student.registerstudent.8"/></label></td>
 							<td><form:select path="userDetails.gender" id="gender" tabindex="3">       

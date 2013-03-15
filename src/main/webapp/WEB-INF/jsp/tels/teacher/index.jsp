@@ -1,4 +1,4 @@
-<%@ include file="./include.jsp"%>
+﻿<%@ include file="./include.jsp"%>
 
 <!-- $Id$ -->
 
@@ -80,10 +80,10 @@ var isTeacherIndex = true; //global var used by spawned pages (i.e. archive run)
 					type: 'post',
 					url: '/webapp/teacher/run/manage/extendremindertime.html?runId=' + id,
 					success: function(request){
-						runLIhtml('<span style="color: #24DD24;">You will be reminded to archive project run ' + id + ' again in 30 days.</span>');
+						runLIhtml('<span style="color: #24DD24;">30天後將再次提醒您歸檔執行專題: ' + id + '</span>');
 					},
 					error: function(request,error){
-						runLI.innerHTML = '<span style="color: #DD2424;">Unable to update project run ' + id + ' on server.</span>';
+						runLI.innerHTML = '<span style="color: #DD2424;">伺服器無法更新執行專題: ' + id + '</span>';
 					}
             	});
             };
@@ -100,7 +100,7 @@ var isTeacherIndex = true; //global var used by spawned pages (i.e. archive run)
 					url: '/webapp/teacher/run/manage/archiveRun.html?runId=' + runId,
 					success: function(request){
 						/* update message on teacher index page announcements section */
-						runLI.html('<span style="color:#24DD24;">Project run ' + runId + ' has been archived.</span>');
+						runLI.html('<span style="color:#24DD24;">執行專題: ' + runId + ' 已歸檔。</span>');
 
 						/* remove archived run from quick runs list */
 						var child = window.frames['dynamicFrame'].document.getElementById('runTitleRow_' + runId);
@@ -108,7 +108,7 @@ var isTeacherIndex = true; //global var used by spawned pages (i.e. archive run)
 					},
 					error: function(request,error){
 						/* set failure message */
-						runLIhtml('<span style="color:#992244;">Unable to archive project run! Refresh this page and try again.</span>');
+						runLIhtml('<span style="color:#992244;">無法歸檔執行專題! 刷新這個頁面再試一次。</span>');
 					}
 				});
             };

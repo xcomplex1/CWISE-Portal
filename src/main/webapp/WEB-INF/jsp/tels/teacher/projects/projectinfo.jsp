@@ -1,4 +1,4 @@
-<%@ include file="../include.jsp"%>
+﻿<%@ include file="../include.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 
 <!-- $Id$ -->
@@ -69,10 +69,18 @@
 		</div>
 		<div class="projectThumb" thumbUrl="${projectThumbPath}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 		<div class="summaryInfo">
-			<div class="basicInfo">
-				<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+			<div class="basicInfo">	
+            <!-- Modified by Richard 2012/3/3  -->			
+				<c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+			<!--	<c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>-->
+				<c:if test="${project.metadata.subject == 'Life Science'}">環境科學 |</c:if>
+				<c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				<c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				<c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				<c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+			<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 				<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="project.metadata.2" /> ${project.metadata.gradeRange} | </c:if>
-				<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="project.metadata.3" /> ${project.metadata.totalTime} | </c:if>
+				<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="project.metadata.3" /> ${project.metadata.totalTime} 小時| </c:if>
 				<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 				<div style="float:right;"><spring:message code="project.metadata.4" /> <fmt:formatDate value="${project.dateCreated}" type="date" dateStyle="medium" /></div>
 			</div>
@@ -81,8 +89,8 @@
 			</div>
 			<div class="details" id="details_${project.id}">
 				<c:if test="${project.metadata.keywords != null && project.metadata.keywords != ''}"><p><span style="font-weight:bold;"><spring:message code="project.metadata.6" /></span> ${project.metadata.keywords}</p></c:if>
-				<c:if test="${project.metadata.techDetailsString != null && project.metadata.techDetailsString != ''}"><p><span style="font-weight:bold;">Tech Requirements:</span> ${project.metadata.techDetailsString}</p></c:if>
-				<c:if test="${project.metadata.compTime != null && project.metadata.compTime != ''}"><p><span style="font-weight:bold;"><spring:message code="project.metadata.7" /></span> ${project.metadata.compTime}</p></c:if>
+				<c:if test="${project.metadata.techDetailsString != null && project.metadata.techDetailsString != ''}"><p><span style="font-weight:bold;"><spring:message code="project.metadata.6a" /></span> ${project.metadata.techDetailsString}</p></c:if>
+				<c:if test="${project.metadata.compTime != null && project.metadata.compTime != ''}"><p><span style="font-weight:bold;"><spring:message code="project.metadata.7" /></span> ${project.metadata.compTime} 小時</p></c:if>
 				<p><span style="font-weight:bold;"><spring:message code="project.metadata.8" /></span> <a href="/webapp/contactwiseproject.html?projectId=${project.id}" target="_blank"><spring:message code="project.metadata.9" /></a></p>
 				<c:if test="${project.metadata.author != null && project.metadata.author != ''}"><p><span style="font-weight:bold;"><spring:message code="project.metadata.10" /></span> ${project.metadata.author}</p></c:if>
 				<c:set var="lastEdited" value="${project.metadata.lastEdited}" />

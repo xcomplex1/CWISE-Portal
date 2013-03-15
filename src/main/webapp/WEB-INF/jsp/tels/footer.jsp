@@ -1,4 +1,4 @@
-<div id="footer">
+﻿<div id="footer">
 	<div class="banner">
 	 	<div id="contentFooter">
 	 		<div id="footerLinks">
@@ -23,6 +23,12 @@
 	 		</div>
 	 		<div>
 	 			<div id="footerLogos">
+				    <a href="http://www.nknu.edu.tw/" title="國立高雄師範大學" target="_blank">
+						<img src="/webapp/themes/tels/default/images/nknulogo.png" alt="國立高雄師範大學" width="60" height="60"/>
+					</a>
+					<a href="http://www.ntnu.edu.tw/" title="國立臺灣師範大學" target="_blank">
+						<img src="/webapp/themes/tels/default/images/ntnulogo.png" alt="國立臺灣師範大學" />
+					</a>
 					<a href="http://www.nsf.gov" title="National Science Foundation" target="_blank">
 						<img src="/webapp/themes/tels/default/images/nsf-logo.png" alt="National Science Foundation logo" />
 					</a>
@@ -39,7 +45,9 @@
 						<img src="/webapp/themes/tels/default/images/tels-logo-small.png" alt="TELS logo" />
 					</a>
 				</div>
+				<!--<div id="footerText">-->
 				<div id="footerText">
+				    <p>行政院國家科學委員會贊助，計畫編號：NSC 100-2511-S-017  - 001</p>				
 					<p><spring:message code="footer.legal1" /></p>
 					<p>&copy; <spring:message code="footer.legal3" /></p>
 				</div>

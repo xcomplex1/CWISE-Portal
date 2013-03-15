@@ -54,7 +54,7 @@
 							<p class="featureHeader">閱讀&寫作提示</p>
 							<ul>
 								<li><span style="font-weight:bold;">預測、觀察、解釋、反思：</span><br>POER模式引導學生解釋主題、提出預測、描述觀察蒐集到的資料，並且用證據去解釋他們預測的改變。</li>
-								<li><span style="font-weight:bold;">評論與回饋：</span><br>學生透過風格性、目的性和證據來源產生評論以評估不同的論點，以這些評論為基礎，他們寫下了對同儕實作的重要回應。</li>
+								<li><span style="font-weight:bold;">評論與回饋：</span><br>支援學生發展標準用以評論不同的主張，以這些評論為基礎，寫下對同儕實作內容的回應。</li>
 								<li><span style="font-weight:bold;">科學論述：</span><br>學生寫下一致性的科學論述，這需要他們去選擇重要的事件，並且關注事件的順序性與連貫性。</li>
 								<li><span style="font-weight:bold;">挑戰問題：</span><br>學生評估不同科學解釋的品質而且自動被引導到相關的活動以增進他們的理解。</li>
 							</ul>

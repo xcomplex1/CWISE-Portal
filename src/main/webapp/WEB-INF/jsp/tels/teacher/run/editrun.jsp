@@ -1,4 +1,4 @@
-<%@ include file="include.jsp"%>
+﻿<%@ include file="include.jsp"%>
 
 <!DOCTYPE html>
 <html xml:lang="en" lang="en">
@@ -25,7 +25,7 @@
 
 		/* validate user entered value */
 		if(!val || val==''){
-			writeMessage('You must specify a value for the title of the run');
+			writeMessage('您必須指定一個執行標題的值');
 			return;
 		}
 
@@ -38,7 +38,7 @@
 
 		/* validate user entered value */
 		if(!val || val==''){
-			writeMessage('You must specify a value for the period');
+			writeMessage('您必須指定一個班級的值');
 			return;
 		}
 
@@ -51,24 +51,24 @@
 	}
 
 	function updateSuccess(){
-		writeMessage('Successfully updated run settings!');
+		writeMessage('成功更新執行設定！');
 	}
 	
 	function updateTitleSuccess(){
 		runUpdated = true;
-		writeMessage('Successfully updated run title!');
+		writeMessage('成功更新執行標題！');
 	}
 
 	function updateFailure(){
-		writeMessage('Error contacting server to update run information, please try again.');
+		writeMessage('更新執行資訊產生錯誤，請再試一次！');
 	}
 
 	function updatePeriodSuccess(){
 		runUpdated = true;
 		var val = $('#editRunPeriodsInput').val();
 
-		$('#existingPeriodsList').append('<li>Period Name: ' + val);
-		writeMessage('Period successfully added to run!');
+		$('#existingPeriodsList').append('<li>班級名稱: ' + val);
+		writeMessage('成功新增執行的班級！');
 	}
 
 	$(document).ready(function() {		
@@ -88,40 +88,40 @@
 	<div id="runId" style="display:none;">${run.id}</div>
 	<div id='msgDiv'></div>
 	<div id="editRunTitleDiv" class="dialogSection">
-		Run Title: <input id="editRunTitleInput" class="dialogTextInput" type="text" size="40" value="<c:out value='${run.name}' />"/><input type="button" value="Update Title" onclick="updateRunTitle('${run.id}')"/>
+		執行標題: <input id="editRunTitleInput" class="dialogTextInput" type="text" size="40" value="<c:out value='${run.name}' />"/><input type="button" value="更新標題" onclick="updateRunTitle('${run.id}')"/>
 	</div>
 	<div id='runInfo' class="dialogSection">
 		<c:choose>
 			<c:when test="${run.ideaManagerEnabled}">
-				<input id='enableIdeaManager' class='runInfoOption' type="checkbox" checked="checked" ></input>Enable Idea Manager<br/>
+				<input id='enableIdeaManager' class='runInfoOption' type="checkbox" checked="checked" ></input>想法管理<br/>
 			</c:when>
 			<c:otherwise>
-				<input id='enableIdeaManager' class='runInfoOption' type="checkbox" ></input>Enable Idea Manager<br/>
+				<input id='enableIdeaManager' class='runInfoOption' type="checkbox" ></input>想法管理<br/>
 			</c:otherwise>
 		</c:choose>
 		<c:choose>
 			<c:when test="${run.studentAssetUploaderEnabled}">
-				<input id='enableStudentAssetUploader' class='runInfoOption' type="checkbox" checked="checked"></input>Enable Student File Uploader
+				<input id='enableStudentAssetUploader' class='runInfoOption' type="checkbox" checked="checked"></input>學生檔案上傳
 			</c:when>
 			<c:otherwise>
-				<input id='enableStudentAssetUploader' class='runInfoOption' type="checkbox"></input>Enable Student File Uploader
+				<input id='enableStudentAssetUploader' class='runInfoOption' type="checkbox"></input>學生檔案上傳
 			</c:otherwise>
 		</c:choose>
 	</div>
-	<div class="sectionHead">Existing Class Periods</div>
+	<div class="sectionHead">目前班級</div>
 	<div id="editRunPeriodsDiv" class="dialogSection">
 		<div id="editRunPeriodsExistingPeriodsDiv">
 			<ul id="existingPeriodsList">
 				<c:forEach var="period" items="${run.periods}">
-					<li>Period Name: ${period.name}</li>
+					<li>班級名稱: ${period.name}</li>
 				</c:forEach>
 			</ul>
 		</div>
 	</div>
-	<div class="sectionHead">Add a New Period:</div>
+	<div class="sectionHead">新增班級:</div>
 	<div class="dialogSection">
 		<div id="editRunPeriodsAddPeriodDiv">
-			<div>Enter period name (e.g. for period 4, enter ONLY 4): <input id="editRunPeriodsInput" class="dialogTextInput" type="text" size="10"/><input type="button" value="Add Period" onclick="updateRunPeriod('${run.id}')"/></div>
+			<div>輸入班級名稱 (e.g. 班級 4，只需輸入 4): <input id="editRunPeriodsInput" class="dialogTextInput" type="text" size="10"/><input type="button" value="新增班級" onclick="updateRunPeriod('${run.id}')"/></div>
 		</div>
 		<div class="buffer"></div>
 	</div>

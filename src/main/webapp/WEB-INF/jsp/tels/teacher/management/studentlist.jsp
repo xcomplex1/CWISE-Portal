@@ -1,4 +1,4 @@
-<%@ include file="include.jsp"%>
+﻿<%@ include file="include.jsp"%>
 
 <!DOCTYPE html>
 <html xml:lang="en" lang="en">
@@ -16,7 +16,7 @@
 		<div class="panelHeader">${run.name} (Run ID: ${run.id})</div>
 		<div class="panelContent">
 			<c:forEach var="period" varStatus="periodStatus" items="${periods}">
-				<div class="sectionHead">Period: ${period.name}</div>
+				<div class="sectionHead">班級: ${period.name}</div>
 				<ul>
 				  <c:forEach var="student" varStatus="studentStatus" items="${period.members}">
 				    <li style="margin:.5em;">

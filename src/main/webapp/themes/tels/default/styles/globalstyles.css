@@ -55,6 +55,7 @@ body {
 	overflow:auto;
 	color: #444;
 	background:url("/webapp/themes/tels/default/images/body-bg.png") repeat-y scroll center top #555555;
+	/*background:url("/webapp/themes/tels/default/images/body-bg-circles.png") repeat-y scroll center top #555555;*/
 }
 	
 img {border: 0px;}
@@ -88,7 +89,7 @@ abbr, acronym {
 	text-align:center;
 }
 
-input[type="button"], input[type="submit"], input[type="text"], input[type="password"] {
+input[type="button"], input[type="submit"], input[type="text"], input[type="password"], textarea  {
 	border-radius: 4px;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
@@ -98,6 +99,7 @@ input[type="button"], input[type="submit"], input[type="text"], input[type="pass
     font-size: 0.9em;
     margin: .25em;
     padding: 0.25em;
+    font-family:Arial,Helvetica,Tahoma,sans-serif;
 }
 
 input[type="text"]:focus {
@@ -133,6 +135,59 @@ input[type="submit"]:hover, input[type="button"]:hover {
 	color: #007391;
 }
 
+input[type="submit"].disabled, input[type="button"].disabled {
+	color:#999999;
+	background-color: #F4F4F4;
+	border-color:#CCCCCC;
+}
+
+table.wisetable {
+	border-collapse: collapse;
+	margin: .5em auto;
+	border: 0 none;
+	text-align: center;
+}
+
+table.wisetable th {
+	border-bottom: 2px solid #777;
+	color: #444;
+	font-weight: bold;
+	padding: .25em .5em;
+	text-align: center;
+}
+
+table.wisetable td {
+	border: 1px solid #DDD;
+	text-align: center;
+	vertical-align: middle;
+	padding: .5em;
+	font-size: 0.9em;
+}
+
+table.wisetable td.emph {
+	color: #745A33;
+}
+
+.pValue {
+	width: 40px;
+	float: right;
+}
+
+.ui-progressbar.progress {
+	margin: 0 40px 0 5px;
+	border-radius: 0 0 0 0;
+	-moz-border-radius: 0 0 0 0;
+	-webkit-border-radius: 0 0 0 0;
+	height:18px;
+	line-height:20px;
+}
+
+.progress .ui-progressbar-value {
+	border-radius: 0 0 0 0;
+	-moz-border-radius: 0 0 0 0;
+	-webkit-border-radius: 0 0 0 0;
+}
+
 #notifications {
 	text-align:center;
 }
@@ -147,12 +202,6 @@ input[type="submit"]:hover, input[type="button"]:hover {
 	box-shadow:1px 1px 2px #aaa;
 	-moz-box-shadow:1px 1px 2px #aaa;
 	-webkit-box-shadow:1px 1px 2px #aaa;
-}
-
-input[type="submit"].disabled, input[type="button"].disabled {
-	color:#999999;
-	background-color: #F4F4F4;
-	border-color:#CCCCCC;
 }
 
 p.info {
@@ -204,7 +253,7 @@ img.icon {
 	background-color: #4D93A1;
     border-top: 6px solid #C6CE52;
     margin: 0 auto;
-    max-width: 1161px;
+    max-width: 1160px;
     color:#DCF2EA;
 }
 
@@ -293,9 +342,9 @@ a#name {
 	border-radius: 6px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
-	box-shadow:2px 2px 4px #444444;
-	-webkit-box-shadow:2px 2px 4px #444444;
-	-moz-box-shadow:2px 2px 4px #444444;
+	-moz-box-shadow:1px 1px 3px #444;
+	-webkit-box-shadow:1px 1px 3px #444;
+	box-shadow:1px 1px 3px #444;
 	background-color: #FFFFFF;
 }
 
@@ -330,9 +379,9 @@ a#name {
 	border-radius: 8px;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
-	box-shadow:2px 2px 4px #444444;
-	-webkit-box-shadow:2px 2px 4px #444444;
-	-moz-box-shadow:2px 2px 4px #444444;
+	-moz-box-shadow:1px 1px 3px #444;
+	-webkit-box-shadow:1px 1px 3px #444;
+	box-shadow:1px 1px 3px #444;
 }
 
 .sidePanel {
@@ -341,9 +390,9 @@ a#name {
 	-moz-border-radius: 8px;
     background-color: #FFFFFF;
     border: 6px solid #FFFFFF;
-    box-shadow:2px 2px 4px #444444;
-	-webkit-box-shadow:2px 2px 4px #444444;
-	-moz-box-shadow:2px 2px 4px #444444;
+    -moz-box-shadow:1px 1px 3px #444;
+	-webkit-box-shadow:1px 1px 3px #444;
+	box-shadow:1px 1px 3px #444;
     margin-bottom: 1em;
 }
 
@@ -356,12 +405,18 @@ a#name {
     color: #FFFFFF;
     margin: 0;
     padding: 0.3em 0.5em;
+    text-shadow:-1px 0 #A3AA3F, 0 1px #A3AA3F, 1px 0 #A3AA3F, 0 -1px #A3AA3F;
 }
 
 .sidePanel .panelContent {
-	-moz-border-radius: 0 0 4px 4px;
     background-color: #745A34;
     color: #F2F4D2;
+}
+
+.sidePanel .panelContent:last-child {
+	-webkit-border-radius:0 0 4px 4px;
+	-moz-border-radius:0 0 4px 4px;
+	border-radius:0 0 4px 4px;
 }
 
 .sidePanel .panelContent a {
@@ -474,6 +529,29 @@ a#name {
 
 .sectionContent th {
 	font-weight:bold;
+}
+
+/** Dialog Styles **/
+.dialogContent {
+	background:#FFFFFF;
+	padding:.5em;
+	font-size:.9em;
+	font-family: Arial,Helvetica,Tahoma,sans-serif;
+}
+
+.dialogSection {
+	padding:.5em;
+	line-height:1.25em;
+}
+
+.dialogTextInput {
+	margin-top:.5em;
+	color:#444444;
+}
+
+#msgDiv {
+	color:#FF563F;
+	margin:.5em;
 }
 
 /*#bannerArea2 {
@@ -739,7 +817,7 @@ a.signup {
 }
 
 .pageTitle {
-	font-family: Lucida Grande;
+	font-family: Arial,Helvetica,Tahoma,sans-serif;
 	color: #F97F6E;
 	float: right;
 	font-size:.9em;

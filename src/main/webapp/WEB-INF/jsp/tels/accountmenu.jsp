@@ -61,7 +61,7 @@
 	<div id="userInfoBlock" class="userInfo">
 		<a id="signOut" class="wisebutton minibutton" href="<c:url value="/j_spring_security_logout"/>" title="<spring:message code="log.out"/>"><spring:message code="log.out"/></a>
 		<div id="userName">
-			<span><spring:message code="welcome" /><sec:authentication property="principal.firstname" /> <sec:authentication property="principal.lastname" />!</span>
+			<span><spring:message code="welcome" /> <sec:authentication property="principal.firstname" /><!-- Modified by Richard 2012/2/23  <sec:authentication property="principal.lastname" />--></span>
 		</div>
 		<div<sec:authorize ifAllGranted="ROLE_STUDENT"> style="margin-top:1.25em;"</sec:authorize>>
 			<spring:message code="teacher.index.4" /> <span id="lastLogin"></span>

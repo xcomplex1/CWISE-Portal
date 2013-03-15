@@ -166,8 +166,8 @@ p.newsSnippet {
 /* Project Showcase Accordion Styles */
 #projectShowcase {
 	background: url('/webapp/themes/tels/default/images/home/project_showcase_bg.png') no-repeat center center;
-	width:670px;
-	float:right;
+	width:600px;
+	float:right; 
 }
 
 #features {

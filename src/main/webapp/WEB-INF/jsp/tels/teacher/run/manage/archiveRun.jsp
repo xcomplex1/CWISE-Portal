@@ -1,4 +1,4 @@
-<%@ include file="../include.jsp"%>
+﻿<%@ include file="../include.jsp"%>
 <!-- $Id$ -->
 
 <!DOCTYPE html>

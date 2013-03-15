@@ -15,8 +15,8 @@
 		
 dd p{line-height:120%}
 
-#project-showcase{width:644px;height:220px;padding:12px;}
-#project-showcase dl{width: 644px;height: 220px;}	
+#project-showcase{width:520px;height:220px;padding:12px;}
+#project-showcase dl{width: 520px;height: 220px;}	
 #project-showcase dt{height:44px;line-height:44px;text-align:right;padding:0 15px 0 0;font-size:1.1em;font-weight:bold;font-family: "Trebuchet MS", "Lucida Grande", "Lucida San Unicode", "Gill Sans", Helvetica, Arial;, sans-serif;text-transform:uppercase;letter-spacing:1px;background:#f2f5db;color:#745a33}
 #project-showcase dt.activea{cursor:pointer;color:#fff;background:#f47f6e;}
 #project-showcase dt.hover{color:#a8906b}

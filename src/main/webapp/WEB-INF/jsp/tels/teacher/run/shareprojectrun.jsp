@@ -1,4 +1,4 @@
-<%@ include file="../../include.jsp" %>
+﻿<%@ include file="../../include.jsp" %>
 
 <!DOCTYPE html>
 
@@ -79,7 +79,7 @@ function removeSharedUserClicked() {
 	<div id="sharingSearchSelect">
 		<form:form method="post" commandName="addSharedTeacherParameters" autocomplete='off'>
 			<spring:message code="teacher.run.shareprojectrun.20"/> <form:input path="sharedOwnerUsername" id="sharedOwnerUsernameInput" onkeyup="populatePossibilities(this.value)" size="30"/>
-		    <input type="submit" value="Save" />
+		    <input type="submit" value="儲存" />
 		</form:form>
 		<ul id="matchedUsernames"></ul>
 	</div>
@@ -120,7 +120,7 @@ function removeSharedUserClicked() {
 					<td><form:form method="post" id="${sharedowner.userDetails.username}" commandName="${sharedowner.userDetails.username}" autocomplete='off'>
 	            		<form:hidden path="sharedOwnerUsername" />
 	            		<input type="hidden" name="removeUserFromRun" value="true"></input>
-						<input type="submit" value="Remove this User" onclick="return removeSharedUserClicked();"></input>
+						<input type="submit" value="移除此位使用者" onclick="return removeSharedUserClicked();"></input>
 				    	</form:form>			        
 					    <!-- <a href='#' onclick="alert('Remove Shared Teacher is not yet implemented.');"><spring:message code="teacher.run.shareprojectrun.16"/></a> -->
 					</td>

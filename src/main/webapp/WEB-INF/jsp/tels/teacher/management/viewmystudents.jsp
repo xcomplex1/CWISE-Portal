@@ -1,4 +1,4 @@
-<%@ include file="include.jsp"%>
+﻿<%@ include file="include.jsp"%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +78,7 @@ $(document).ready(function(){
 			position: 'center',
 			close: function(){ $(this).remove(); },
 			buttons: {
-				Close: function(){$(this).dialog('close');}
+				關閉: function(){$(this).dialog('close');}
 			}
 		});
 		$("#studentInfoDialog > #studentInfoIfrm").attr('src',path);
@@ -99,7 +99,7 @@ $(document).ready(function(){
 			position: 'center',
 			close: function(){ $(this).remove(); },
 			buttons: {
-				Close: function(){$(this).dialog('close');}
+				關閉: function(){$(this).dialog('close');}
 			}
 		});
 		$("#studentPasswordDialog > #studentPasswordIfrm").attr('src',path);
@@ -128,7 +128,7 @@ $(document).ready(function(){
 				$(this).remove();
 			},
 			buttons: {
-				Close: function(){$(this).dialog('close');}
+				關閉: function(){$(this).dialog('close');}
 			}
 		});
 		$("#studentPeriodDialog > #studentPeriodIfrm").attr('src',path);
@@ -157,7 +157,7 @@ $(document).ready(function(){
 				$(this).remove();
 			},
 			buttons: {
-				Close: function(){$(this).dialog('close');}
+				關閉: function(){$(this).dialog('close');}
 			}
 		});
 		$("#removeStudentDialog > #removeStudentIfrm").attr('src',path);
@@ -178,7 +178,7 @@ $(document).ready(function(){
 			position: 'center',
 			close: function(){ $(this).remove(); },
 			buttons: {
-				Close: function(){$(this).dialog('close');}
+				關閉: function(){$(this).dialog('close');}
 			}
 		});
 		$("#changeAllPasswordsDialog > #changeAllPasswordsIfrm").attr('src',path);

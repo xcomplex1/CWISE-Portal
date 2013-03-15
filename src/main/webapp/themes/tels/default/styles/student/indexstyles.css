@@ -126,7 +126,7 @@ table tr, table td {
 	font-size:.75em;
 }
 
-#displayAsEnglish {
+.displayAsEnglish {
 	text-align:center;
 	font-size:.8em;
 	margin:2px 5px 5px 5px;
@@ -244,8 +244,11 @@ font-weight: bold;
 }
 
 .studentActionList li.startProject {
-	list-style-type:none;
-	font-size:160%;
+	font-size:1.6em;
+}
+
+.studentActionList li.announcements {
+	font-size:1.25em;
 }
 
 .studentActionList li a {

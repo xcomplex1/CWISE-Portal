@@ -1,4 +1,4 @@
-<%@ include file="include.jsp"%>
+﻿<%@ include file="include.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
 
 <!-- $Id$ -->
@@ -146,23 +146,24 @@ $(document).ready(function() {
 	
 	var facets = new FacetedFilter( otable.fnSettings(), {
 		"bScroll": false,
-		"sClearFilterLabel": "Clear",
+		"sClearFilterLabel": "清除",
 		"aSearchOpts": [
 			{
-				"identifier": "<spring:message code="teacher.datatables.search.1a"/>", "label": "<spring:message code="teacher.datatables.search.1b"/> ", "column": 0, "maxlength": 50
+				"identifier": "<spring:message code='teacher.datatables.search.1a'/>", "label": "<spring:message code="teacher.datatables.search.1b"/> ", "column": 0, "maxlength": 50
 			}
 		 ],
 		"aFilterOpts": [
 			{
 				"identifier": "subject", "label": "<spring:message code="teacher.datatables.filter.5a"/>", "column": 1,
 				"options": [
-					{"query": "<spring:message code="teacher.datatables.filter.5b"/>", "display": "<spring:message code="teacher.datatables.filter.5b"/>"}, // TODO: modify FacetedFilter plugin to only require a query for each filter, use query as display if display option is not set
-					{"query": "<spring:message code="teacher.datatables.filter.5c"/>", "display": "<spring:message code="teacher.datatables.filter.5c"/>"},
-					{"query": "<spring:message code="teacher.datatables.filter.5d"/>", "display": "<spring:message code="teacher.datatables.filter.5d"/>"},
-					{"query": "<spring:message code="teacher.datatables.filter.5e"/>", "display": "<spring:message code="teacher.datatables.filter.5e"/>"},
-					{"query": "<spring:message code="teacher.datatables.filter.5f"/>", "display": "<spring:message code="teacher.datatables.filter.5f"/>"},
-					{"query": "<spring:message code="teacher.datatables.filter.5g"/>", "display": "<spring:message code="teacher.datatables.filter.5g"/>"},
-					{"query": "<spring:message code="teacher.datatables.filter.5h"/>", "display": "<spring:message code="teacher.datatables.filter.5h"/>"}
+				//Modified by Richard 2012/3/3
+					{"query": "<spring:message code="teacher.datatables.filter.5b"/>", "display": "環境科學"}, // TODO: modify FacetedFilter plugin to only require a query for each filter, use query as display if display option is not set
+					{"query": "<spring:message code="teacher.datatables.filter.5c"/>", "display": "地球科學"},
+					{"query": "<spring:message code="teacher.datatables.filter.5d"/>", "display": "生命科學"},
+					{"query": "<spring:message code="teacher.datatables.filter.5e"/>", "display": "自然科學"},
+					{"query": "<spring:message code="teacher.datatables.filter.5f"/>", "display": "生物學"},
+					{"query": "<spring:message code="teacher.datatables.filter.5g"/>", "display": "化學"},
+					{"query": "<spring:message code="teacher.datatables.filter.5h"/>", "display": "物理學"}
 				]
 			}
 		]
@@ -275,9 +276,17 @@ $(document).ready(function() {
 													<div class="summaryInfo">
 														<div class="libraryIcon"><img src="/webapp/themes/tels/default/images/open_book.png" alt="library project" /> <spring:message code="teacher.manage.library.32" /></div>
 														<div class="basicInfo">
-															<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+														    <!-- Modified by Richard 2012/3/3  -->			
+				                                            <c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+				                                            <c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>
+				                                            <c:if test="${project.metadata.subject == 'Life Science'}">生命科學 |</c:if>
+				                                            <c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				                                            <c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				                                            <c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				                                            <c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+														<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 															<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="teacher.manage.library.20" /> ${project.metadata.gradeRange} | </c:if>
-															<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} | </c:if>
+															<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} 小時 | </c:if>
 															<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 															<div style="float:right;"><spring:message code="teacher.manage.library.3" /> <fmt:formatDate value="${project.dateCreated}" type="date" dateStyle="medium" /></div>
 														</div>	

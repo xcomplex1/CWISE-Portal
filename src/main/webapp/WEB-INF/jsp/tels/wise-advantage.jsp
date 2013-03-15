@@ -119,7 +119,7 @@
 						<div class="featureContent">
 							<div class="featureContentHeader">10.免費開放原始碼</div>
 							<p>WISE受國家科學委員會的大力支持而繼續運作，任何人可以透過電腦與網路連線而取得。由於<a href="/webapp/pages/research-tech.html#technology">科技開發者社群</a>的驅動，WISE正持續地擴展與改進中。從<a href="/webapp/previewprojectlist.html">WISE專題庫</a>中取得課程或者客製化自己的技術改進課程。
-                                使用wise強大的<a href="/webapp/pages/teacher-tools.html">教學工具</a>讓評分與教學管理變得更容易，因此您可以專注於和個別學生互動的品質上。帶著科學探究到教室、博物館、課後或家庭學習環境。<a href="/webapp/signup.html">註冊</a>一個免費的wise帳號並加入我們成長中的教師、研究者以及軟體開發者社群！
+                                使用wise強大的<a href="/webapp/pages/teacher-tools.html">教學工具</a>讓評分與教學管理變得更容易，因此您可以專注於和個別學生互動的品質上。將科學探究帶進教室、博物館、課後或家庭學習環境。<a href="/webapp/signup.html">註冊</a>一個免費的wise帳號並加入我們成長中的教師、研究者以及軟體開發者社群！
                              </p>
 						</div>
 						<div style="clear:both;"></div>

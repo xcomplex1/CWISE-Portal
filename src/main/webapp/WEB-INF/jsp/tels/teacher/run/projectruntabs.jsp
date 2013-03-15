@@ -336,7 +336,7 @@
 						    <tr>
 						       <th style="width:250px;"class="tableHeaderMain archive"><spring:message code="teacher.run.myprojectruns.3A"/></th>
 						       <th style="width:140px;" class="tableHeaderMain archive"><spring:message code="teacher.run.myprojectruns.4"/></th>      
-						       <th style="width:290px;" class="tableHeaderMain archive"><spring:message code="teacher.run.myprojectruns.5"/></th>
+						       <th style="width:290px;" class="tableHeaderMain archive"><spring:message code="teacher.run.myprojectruns.5A"/></th>
 						       <th style="display:none;" class="tableHeaderMain"><spring:message code="teacher.run.myprojectruns.58A" /></th>
 						       <th style="display:none;" class="tableHeaderMain"><spring:message code="teacher.run.myprojectruns.58B" /></th>
 						       <th style="display:none;" class="tableHeaderMain"><spring:message code="teacher.run.myprojectruns.58C" /></th>
@@ -423,11 +423,11 @@
 									</td> 
 									<td style="vertical-align:top; padding: 0.25em 0;">
 									    <ul class="actionList">
-								        	<li><a href="/webapp/previewproject.html?projectId=${run.project.id}&versionId=${run.versionId}" target="_blank">View the Project</a></li>
+								        	<li><a href="/webapp/previewproject.html?projectId=${run.project.id}&versionId=${run.versionId}" target="_blank"><spring:message code="teacher.run.myprojectruns.56"/></a></li>
 								        </ul>
 								        <ul class="actionList">	
-								        	<li><spring:message code="teacher.run.myprojectruns.16"/>: <a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=step&getRevisions=false" target="_top"><spring:message code="teacher.run.myprojectruns.42"/></a>&nbsp;|&nbsp;<a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=step&getRevisions=true" target="_top"><spring:message code="teacher.run.myprojectruns.41"/></a></li>
-					 	                    <li><spring:message code="teacher.run.myprojectruns.17"/>: <a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=team&getRevisions=false" target="_top"><spring:message code="teacher.run.myprojectruns.42"/></a>&nbsp;|&nbsp;<a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=team&getRevisions=true" target="_top"><spring:message code="teacher.run.myprojectruns.41"/></a></li>		
+								        	<li><spring:message code="teacher.run.myprojectruns.67"/>: <a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=step&getRevisions=false" target="_top"><spring:message code="teacher.run.myprojectruns.42"/></a>&nbsp;|&nbsp;<a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=step&getRevisions=true" target="_top"><spring:message code="teacher.run.myprojectruns.41"/></a></li>
+					 	                    <li><spring:message code="teacher.run.myprojectruns.68"/>: <a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=team&getRevisions=false" target="_top"><spring:message code="teacher.run.myprojectruns.42"/></a>&nbsp;|&nbsp;<a href="/webapp/teacher/grading/gradework.html?runId=${run.id}&gradingType=team&getRevisions=true" target="_top"><spring:message code="teacher.run.myprojectruns.41"/></a></li>		
 					                    </ul>
 					                    <ul class="actionList actionList2">
 					                    	<sec:accesscontrollist domainObject="${run}" hasPermission="16">					    	

@@ -1,4 +1,4 @@
-<link href="<spring:theme code="teacherrunstylesheet"/>" media="screen" rel="stylesheet"  type="text/css" />
+﻿<link href="<spring:theme code="teacherrunstylesheet"/>" media="screen" rel="stylesheet"  type="text/css" />
 <link href="<spring:theme code="jquerydatatables.css"/>" media="screen" rel="stylesheet"  type="text/css" />
 <link href="<spring:theme code="facetedfilter.css"/>" media="screen" rel="stylesheet"  type="text/css" />
 <script type="text/javascript" src="<spring:theme code="jquerydatatables.js"/>"></script>
@@ -8,7 +8,6 @@
 
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ page contentType="text/html;charset=UTF-8"%>
 
 <%@ page buffer="100kb" %>
 
@@ -99,8 +98,7 @@
 					$('#copyDialog').html($copyingDialog);
 					$('ui-dialog-titlebar-close',$(this).parent()).hide();
 					$('button',$(this).parent()).hide().unbind();
-					//var escapedName = escape(name); 
-					//�g�J��Ʈw�s�X�ରUTF-8�Fmodified by Richard 2011/12/19
+                                        //modified by Richard 2012/5/9
 					var escapedName = encodeURIComponent(name);
 					if(type=='LD'){
 						$.ajax({
@@ -412,7 +410,7 @@
 				
 				// TODO: add url params to current page location for each filter/search/sort/pagination/projects per page
 			},
-			"sDom":'<"top"lip<"clear">>rt<"bottom"ip<"clear">><"clear">'
+			"sDom":'<"top"lip>rt<"bottom"ip<"clear">><"clear">'
 			//"sDom":'<"top"lip<"clear">>rt<"bottom"ip><"clear">'
 		});
 		
@@ -453,14 +451,15 @@
 				{
 					"identifier": "subject", "label": "<spring:message code="teacher.datatables.filter.5a"/>", "column": 3,
 					"options": [
-						{"query": "<spring:message code="teacher.datatables.filter.5b"/>", "display": "<spring:message code="teacher.datatables.filter.5b"/>"}, // TODO: modify FacetedFilter plugin to only require a query for each filter, use query as display if display option is not set
-						{"query": "<spring:message code="teacher.datatables.filter.5c"/>", "display": "<spring:message code="teacher.datatables.filter.5c"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.5d"/>", "display": "<spring:message code="teacher.datatables.filter.5d"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.5e"/>", "display": "<spring:message code="teacher.datatables.filter.5e"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.5f"/>", "display": "<spring:message code="teacher.datatables.filter.5f"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.5g"/>", "display": "<spring:message code="teacher.datatables.filter.5g"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.5h"/>", "display": "<spring:message code="teacher.datatables.filter.5h"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.5i"/>", "display": "<spring:message code="teacher.datatables.filter.5i"/>"}
+					    //Modified by Richard 2012/3/3
+						{"query": "<spring:message code="teacher.datatables.filter.5b"/>", "display": "環境科學"}, // TODO: modify FacetedFilter plugin to only require a query for each filter, use query as display if display option is not set
+						{"query": "<spring:message code="teacher.datatables.filter.5c"/>", "display": "地球科學"},
+						{"query": "<spring:message code="teacher.datatables.filter.5d"/>", "display": "生命科學"},
+						{"query": "<spring:message code="teacher.datatables.filter.5e"/>", "display": "自然科學"},
+						{"query": "<spring:message code="teacher.datatables.filter.5f"/>", "display": "生物學"},
+						{"query": "<spring:message code="teacher.datatables.filter.5g"/>", "display": "化學"},
+						{"query": "<spring:message code="teacher.datatables.filter.5h"/>", "display": "物理學"},
+						{"query": "<spring:message code="teacher.datatables.filter.5i"/>", "display": "WISE研究"}
 					]
 				},
 				{
@@ -475,12 +474,13 @@
 				{
 					"identifier": "duration", "label": "<spring:message code="teacher.datatables.filter.7a"/>", "column": 5,
 					"options": [
-						{"query": "<spring:message code="teacher.datatables.filter.7b"/>", "display": "<spring:message code="teacher.datatables.filter.7b"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.7c"/>", "display": "<spring:message code="teacher.datatables.filter.7c"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.7d"/>", "display": "<spring:message code="teacher.datatables.filter.7d"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.7e"/>", "display": "<spring:message code="teacher.datatables.filter.7e"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.7f"/>", "display": "<spring:message code="teacher.datatables.filter.7f"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.7g"/>", "display": "<spring:message code="teacher.datatables.filter.7g"/>"}
+					//Modified by Richard 2012/3/3
+						{"query": "<spring:message code="teacher.datatables.filter.7b"/>", "display": "<spring:message code="teacher.datatables.filter.7b"/> 小時"},
+						{"query": "<spring:message code="teacher.datatables.filter.7c"/>", "display": "<spring:message code="teacher.datatables.filter.7c"/> 小時"},
+						{"query": "<spring:message code="teacher.datatables.filter.7d"/>", "display": "<spring:message code="teacher.datatables.filter.7d"/> 小時"},
+						{"query": "<spring:message code="teacher.datatables.filter.7e"/>", "display": "<spring:message code="teacher.datatables.filter.7e"/> 小時"},
+						{"query": "<spring:message code="teacher.datatables.filter.7f"/>", "display": "<spring:message code="teacher.datatables.filter.7f"/> 小時"},
+						{"query": "<spring:message code="teacher.datatables.filter.7g"/>", "display": "<spring:message code="teacher.datatables.filter.7g"/> 小時"}
 					]
 				},
 				{
@@ -490,7 +490,8 @@
 						{"query": "<spring:message code="teacher.datatables.filter.8c"/>", "display": "<spring:message code="teacher.datatables.filter.8c"/>"},
 						{"query": "<spring:message code="teacher.datatables.filter.8d"/>", "display": "<spring:message code="teacher.datatables.filter.8d"/>"},
 						{"query": "<spring:message code="teacher.datatables.filter.8e"/>", "display": "<spring:message code="teacher.datatables.filter.8e"/>"},
-						{"query": "<spring:message code="teacher.datatables.filter.8f"/>", "display": "<spring:message code="teacher.datatables.filter.8f"/>"}
+						{"query": "<spring:message code="teacher.datatables.filter.8f"/>", "display": "<spring:message code="teacher.datatables.filter.8f"/>"},
+						{"query": "<spring:message code="teacher.datatables.filter.8g"/>", "display": "<spring:message code="teacher.datatables.filter.8g"/>"}
 					]
 				}
 			]
@@ -825,7 +826,7 @@
 	<thead class="tableHeaderMain">
 		<tr>
 			<th><spring:message code="teacher.manage.library.1" /> (${fn:length(ownedProjectsList) + fn:length(sharedProjectsList) + fn:length(libraryProjectsList)})</th>
-			<th>root project</th> 
+			<th>root project</th>
 			<th>source</th>
 			<th>subject</th>
 			<th>grade level</th>
@@ -897,8 +898,8 @@
 												</li>
 												<sec:accesscontrollist domainObject="${project}" hasPermission="2,16">
 													<li><a id="shareProject_${project.id}" class="shareProject" title="<spring:message code="teacher.manage.library.7" /> ${project.name} (<spring:message code="teacher.manage.library.5" /> ${project.id})"><img class="icon" alt="share" src="/webapp/themes/tels/default/images/icons/teal/agent.png" /><span><spring:message code="teacher.manage.library.8" /></span></a>&nbsp;|</li>
-												</sec:accesscontrollist>								
-												<li><a title="<spring:message code="teacher.manage.library.9a" />" onclick="copy('${project.id}','${project.projectType}','${projectNameEscaped}','${filenameMap[project.id]}','${urlMap[project.id]}')" ><img class="icon" alt="copy" src="/webapp/themes/tels/default/images/icons/teal/copy-item.png" /><span><spring:message code="teacher.manage.library.9" /></span></a>&nbsp;|</li>											
+												</sec:accesscontrollist>
+												<li><a title="<spring:message code="teacher.manage.library.9a" />" onclick="copy('${project.id}','${project.projectType}','${projectNameEscaped}','${filenameMap[project.id]}','${urlMap[project.id]}')" ><img class="icon" alt="copy" src="/webapp/themes/tels/default/images/icons/teal/copy-item.png" /><span><spring:message code="teacher.manage.library.9" /></span></a>&nbsp;|</li>
 												<sec:accesscontrollist domainObject="${project}" hasPermission="2,16">
 													<li><a title="<spring:message code="teacher.manage.library.10a" />" href="/webapp/author/authorproject.html?projectId=${project.id}"><img class="icon" alt="edit" src="/webapp/themes/tels/default/images/icons/teal/edit.png" /><span><spring:message code="teacher.manage.library.10" /></span></a>&nbsp;|</li>
 												</sec:accesscontrollist>
@@ -915,9 +916,17 @@
 										<div class="projectThumb" thumbUrl="${projectThumbMap[project.id]}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 										<div class="summaryInfo">
 											<div class="basicInfo">
-												<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+											    <!-- Modified by Richard 2012/3/3  -->			
+				                                <c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Life Science'}">生命科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+											<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 												<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="teacher.manage.library.20" /> ${project.metadata.gradeRange} | </c:if>
-												<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} | </c:if>
+												<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} <spring:message code="teacher.manage.library.21a" /> | </c:if>
 												<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 												<div style="float:right;"><spring:message code="teacher.manage.library.3" /> <fmt:formatDate value="${project.dateCreated}" type="date" dateStyle="medium" /></div>
 											</div>
@@ -959,9 +968,17 @@
 														</div>
 														<c:if test="${project.metadata.lessonPlan != null && project.metadata.lessonPlan != ''}">
 															<div class="basicInfo sectionContent">
-																<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+															    <!-- Modified by Richard 2012/3/3  -->			
+				                                                <c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Life Science'}">生命科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+															<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 																<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="teacher.manage.library.20" /> ${project.metadata.gradeRange} | </c:if>
-																<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} | </c:if>
+																<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} <spring:message code="teacher.manage.library.21a" /> | </c:if>
 																<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 																<c:if test="${project.metadata.techDetailsString != null && project.metadata.techDetailsString != ''}"><p><span style="font-weight:bold;"><spring:message code="teacher.manage.library.14" /></span> ${project.metadata.techDetailsString}</p></c:if>
 															</div>
@@ -1124,9 +1141,17 @@
 											</c:if>
 											</div>
 											<div class="basicInfo">
-												<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+											    <!-- Modified by Richard 2012/3/3  -->			
+				                                <c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Life Science'}">生命科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+											<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 												<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="teacher.manage.library.20" /> ${project.metadata.gradeRange} | </c:if>
-												<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} | </c:if>
+												<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} <spring:message code="teacher.manage.library.21a" /> | </c:if>
 												<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 												<div style="float:right;"><spring:message code="teacher.manage.library.3" /> <fmt:formatDate value="${project.dateCreated}" type="date" dateStyle="medium" /></div>
 											</div>
@@ -1168,9 +1193,17 @@
 														</div>
 														<c:if test="${project.metadata.lessonPlan != null && project.metadata.lessonPlan != ''}">
 															<div class="basicInfo sectionContent">
-																<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+															    <!-- Modified by Richard 2012/3/3  -->			
+				                                                <c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Life Science'}">生命科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+															<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 																<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="teacher.manage.library.20" /> ${project.metadata.gradeRange} | </c:if>
-																<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} | </c:if>
+																<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} <spring:message code="teacher.manage.library.21a" /> | </c:if>
 																<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 																<c:if test="${project.metadata.techDetailsString != null && project.metadata.techDetailsString != ''}"><p><span style="font-weight:bold;"><spring:message code="teacher.manage.library.14" /></span> ${project.metadata.techDetailsString}</p></c:if>
 															</div>
@@ -1321,9 +1354,17 @@
 											</c:if>
 											<div class="libraryIcon"><img src="/webapp/themes/tels/default/images/open_book.png" alt="library project" /> <spring:message code="teacher.manage.library.32" /></div>
 											<div class="basicInfo">
-												<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+											    <!-- Modified by Richard 2012/3/3  -->			
+				                                <c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Life Science'}">生命科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				                                <c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+											<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 												<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="teacher.manage.library.20" /> ${project.metadata.gradeRange} | </c:if>
-												<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} | </c:if>
+												<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} <spring:message code="teacher.manage.library.21a" /> | </c:if>
 												<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 												<div style="float:right;"><spring:message code="teacher.manage.library.3" /> <fmt:formatDate value="${project.dateCreated}" type="date" dateStyle="medium" /></div>
 											</div>
@@ -1362,9 +1403,17 @@
 														</div>
 														<c:if test="${project.metadata.lessonPlan != null && project.metadata.lessonPlan != ''}">
 															<div class="basicInfo sectionContent">
-																<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>
+															    <!-- Modified by Richard 2012/3/3  -->			
+				                                                <c:if test="${project.metadata.subject == 'Earth Science'}">地球科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'General Science'}">環境科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Life Science'}">生命科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Physical Science'}">自然科學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Biology'}">生物學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Chemistry'}">化學 |</c:if>
+				                                                <c:if test="${project.metadata.subject == 'Physics'}">物理學 |</c:if>
+															<!--<c:if test="${project.metadata.subject != null && project.metadata.subject != ''}">${project.metadata.subject} | </c:if>-->
 																<c:if test="${project.metadata.gradeRange != null && project.metadata.gradeRange != ''}"><spring:message code="teacher.manage.library.20" /> ${project.metadata.gradeRange} | </c:if>
-																<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} | </c:if>
+																<c:if test="${project.metadata.totalTime != null && project.metadata.totalTime != ''}"><spring:message code="teacher.manage.library.21" /> ${project.metadata.totalTime} <spring:message code="teacher.manage.library.21a" /> | </c:if>
 																<c:if test="${project.metadata.language != null && project.metadata.language != ''}">${project.metadata.language}</c:if>
 																<c:if test="${project.metadata.techDetailsString != null && project.metadata.techDetailsString != ''}"><p><span style="font-weight:bold;"><spring:message code="teacher.manage.library.14" /></span> ${project.metadata.techDetailsString}</p></c:if>
 															</div>

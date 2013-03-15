@@ -39,7 +39,7 @@
 				<div class="panelContent">
 					<div class="featuresShowcase right">
 						<img src="/webapp/themes/tels/default/images/features/teacher-profile.png" alt="teacher profile" />
-						<div class="featureContentHeader">教師輪廓(中學科學，加州)</div>
+						<div class="featureContentHeader">教師心得分享(中學科學，加州)</div>
 						<div class="featureContent">
 							<p>我七年前開始使用WISE。我總是熱切希望有新的方式幫助我的學生理解困難的科學概念。我持續新增WISE專題到我的課程中，而基於我認為學生如何對科學概念有感覺，我也客製化已經教了幾年的課程。</p>
 							<p>學生喜歡一次又一次地使用這些模型。對於英語系的學習者來說是特別重要，因為他們沒有語言的障礙。這些模型和視覺化表徵幫助建立科學的連結。</p>
@@ -68,13 +68,13 @@
 						<img src="/webapp/themes/tels/default/images/features/partnership-design.png" alt="partnership design" />
 						<div class="featureContent">
 							<div class="featureContentHeader" id="partnershipDesign">協同設計</div>
-							<p>WISE單元是研究者、內容專家、課程教師與科技開發者的協同產物。我們和夥伴學校的教師合作，確認會使學生困惑的重要科學主題，而且成功地幫助學生學習這些困難的主題。探究式設計原則引導我們WISE課程的發展。所有單元都經過設計、評估與精緻化這些不斷的循環過程；透過暑期研討會與教師面談，教師在這個設計過程的多個階段提供了重要的洞見。WISE單元編排在州與國家科學內容、實驗與探究標準之中，適合5~12年級。</p>
+							<p>WISE單元是研究者、內容專家、課程教師與科技開發者的協同產物。我們和夥伴學校的教師合作，確認會使學生困惑的重要科學主題，而且成功地幫助學生學習這些困難的主題。探究式設計原則引導我們WISE課程的發展。所有單元都經過設計、評估與精緻化這些不斷的循環過程；透過暑期研討會與教師面談，教師在這個設計過程的多個階段提供了重要的洞見。WISE單元是依據國家科學教育標準，適合國小、國中、高中。</p>
 						</div>
 						<div style="clear:both;"></div>
 					</div>
 					<div class="featuresShowcase right">
 						<img src="/webapp/themes/tels/default/images/features/assessments.png" alt="wise assessments" />
-						<div class="featureContentHeader">標準校正評量</div>
+						<div class="featureContentHeader">符合課程標準的評量</div>
 						<div class="featureContent">
 							<p>WISE課程單元包含了嵌入式的形成性評量項目以及課程前後的總成性評量項目，而且已經被心理測量學家分析後證實，等同於甚至比標準的測量工具更廣泛地捕捉學生的學習傾向 (Liu, Lee, Hoftstetter, & Linn, 2008; Linn et al., 2006)。</p>
 						</div>
@@ -90,9 +90,9 @@
 						<div style="clear:both;"></div>
 					</div>
 					<div class="featuresShowcase">
-						<div class="featureContentHeader">選擇性學習脈絡</div>
+						<div class="featureContentHeader">多元學習情境</div>
 						<div class="featureContent">
-							<p>WISE課程是可客製化而且可以適應不同的學習背景和需求，而不只是傳統的教室課程。廣泛的測試引領WISE發展多樣性支持給予不同的學習者。雖然每個WISE單元是以研究發現為基礎，包含活動的嚴謹設計流程，這些活動已經模組化而且可以結合離線的活動，像是動手做的示範與實驗，能為現有的教學加值。例如，課外活動與家庭教師教全球氣候變遷時也許會想運用WISE全球氣候變遷的NetLogo模組和相關的提示，讓學生在不同的情況下做實驗。</p>
+							<p>WISE課程是可客製化而且可以適應不同的學習背景和需求，而不只是傳統的教室課程。廣泛的測試引領WISE發展多樣性支持給予不同的學習者。雖然每個WISE單元是以研究發現為基礎，包含活動的嚴謹設計流程，這些活動已經模組化而且可以結合離線的活動，像是動手做的示範與實驗，能為現有的教學加值。例如，課後輔導與家庭教師教全球氣候變遷時也許會想運用WISE全球氣候變遷的NetLogo模組和相關的提示，讓學生在不同的情況下做實驗。</p>
 						</div>
 						<div style="clear:both;"></div>
 					</div>

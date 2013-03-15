@@ -1,5 +1,5 @@
 <%@ include file="include.jsp"%>
-<%@ page contentType="text/html;charset=utf-8"%>
+<%@ page contentType="text/html;charset=UTF-8"%>
 
 <!-- $Id$ -->
 
@@ -158,11 +158,11 @@
 					<div class="panelHead"><span><spring:message code="whatiswiseheader" /></span></div>
 					<div class="slider-wrapper theme-wise">
    				 		<div class="ribbon"></div>
-						<div id="showcaseSlider">
+						<div id="showcaseSlider">						
 						    <img src="/webapp/themes/tels/default/images/home/whatiswise.png" alt="<spring:message code="whatiswiseheader" />" />
 						    <img src="/webapp/themes/tels/default/images/home/curriculumbased.png" alt="<spring:message code="curriculumbasedheader" />" />
 						    <img src="/webapp/themes/tels/default/images/home/inquiry.png" alt="<spring:message code="inquiryprojectsheader" />" />
-						    <img src="/webapp/themes/tels/default/images/home/engagement.png" alt="<spring:message code="studentengagementheader" />" />
+						    <img src="/webapp/themes/tels/default/images/home/engagement.png" alt="<spring:message code="studentengagementheader" />" />						
 						    <img src="/webapp/themes/tels/default/images/home/interactive.png" alt="<spring:message code="interactivemodelsheader" />" />
 						    <img src="/webapp/themes/tels/default/images/home/teachertools.png" alt="<spring:message code="teachertoolsheader" />" />
 						    <img src="/webapp/themes/tels/default/images/home/opensource.png" alt="<spring:message code="freeandopensourceheader" />" />
@@ -178,20 +178,20 @@
 						</c:forEach>
 					</div>
 					<div id="socialLinks">
-						<a href="http://www.facebook.com/pages/WISE-4/150541171679054" title="Find us on Facebook"><img src="/webapp/themes/tels/default/images/home/facebook.png" alt="facebook" /></a>
-						<a href="" title="Follow us on Twitter" ><img src="/webapp/themes/tels/default/images/home/twitter.png" alt="twitter" /></a>
+						<a href="http://www.facebook.com/pages/WISETaiwan/233802890043218" title="歡迎加入WISE@Taiwan社群" target="_blank"><img src="/webapp/themes/tels/default/images/home/facebook.png" alt="facebook" /></a>
+						<a href="https://twitter.com/#!/WISETaiwan" title="WISE@Taiwan推特" target="_blank"><img src="/webapp/themes/tels/default/images/home/twitter.png" alt="twitter" /></a>
 					</div>
 				</div>
 			</div>
 			
 			<div class="showcase">
-				<div id="projectHeader" class="feature"><span class="featureContent">WISE專案</span><a class="projectsLink" href="/webapp/previewprojectlist.html" title="WISE Project Library">瀏覽WISE課程</a></div>
+				<div id="projectHeader" class="feature"><span class="featureContent">WISE專題</span><a class="projectsLink" href="/webapp/previewprojectlist.html" title="WISE Project Library">瀏覽WISE課程</a></div>
 				<div id="features">
 					<div id="featureHeader" class="feature"><span class="featureContent">WISE特色</span></div>
 					<div id="featuresContent">
 						<p><a href="/webapp/pages/features.html">學習環境 +</a></p>
 						<p><a href="/webapp/pages/teacher-tools.html">教師工具 +</a></p>
-						<p><a href="/webapp/pages/gettingstarted.html">開始體驗 +</a></p>
+						<p><a href="/webapp/pages/gettingstarted.html">教師指南 +</a></p>
 						<p id="checkCompatibility"><a href="/webapp/check.html">電腦相容性確認 +</a></p>
 					</div>
 				</div>
@@ -209,10 +209,10 @@
 									    			<div class="projectThumb" thumbUrl="${projectThumbMap[project.id]}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 										    		<div class="projectDetails">
 										    			<p class="name">${project.name}</p>
-								      					<p class="metadata">Grades ${project.metadata.gradeRange} | ${project.metadata.totalTime} | ${project.metadata.language}</p>
+								      					<p class="metadata">年級: ${project.metadata.gradeRange} | ${project.metadata.totalTime} 小時| ${project.metadata.language}</p>
 								      					<p class="summary">${project.metadata.summary}</p>
 								      				</div>
-								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">More Details +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">Preview</a></div>
+								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="詳細說明">詳細說明 +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">預覽</a></div>
 									    		</li>
 									    	</c:forEach>
 									    </ul>
@@ -224,8 +224,8 @@
 										</c:forEach>
 								    </ul>
 							    </div>
-						    </dd>
-						    <dt>生命科學</dt>
+						    </dd>                            							                                                        
+						    <dt>環境科學</dt>
 						    <dd>
 						    	<div class="tinycarousel">
 							    	<a href="#" class="buttons prev">&#9650;</a>
@@ -236,10 +236,10 @@
 									    			<div class="projectThumb" thumbUrl="${projectThumbMap[project.id]}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 										    		<div class="projectDetails">
 										    			<p class="name">${project.name}</p>
-								      					<p class="metadata">Grades ${project.metadata.gradeRange} | ${project.metadata.totalTime} | ${project.metadata.language}</p>
+								      					<p class="metadata">年級: ${project.metadata.gradeRange} | ${project.metadata.totalTime} 小時| ${project.metadata.language}</p>
 								      					<p class="summary">${project.metadata.summary}</p>
 								      				</div>
-								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">More Details +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">Preview</a></div>
+								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="詳細說明">詳細說明 +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">預覽</a></div>
 									    		</li>
 									    	</c:forEach>
 									    </ul>
@@ -251,7 +251,7 @@
 										</c:forEach>
 								    </ul>
 							    </div>
-						    </dd>
+						    </dd>                            						
 						    <dt>自然科學</dt>
 						    <dd>
 						    	<div class="tinycarousel">
@@ -263,10 +263,10 @@
 									    			<div class="projectThumb" thumbUrl="${projectThumbMap[project.id]}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 										    		<div class="projectDetails">
 										    			<p class="name">${project.name}</p>
-								      					<p class="metadata">Grades ${project.metadata.gradeRange} | ${project.metadata.totalTime} | ${project.metadata.language}</p>
+								      					<p class="metadata">年級: ${project.metadata.gradeRange} | ${project.metadata.totalTime} 小時| ${project.metadata.language}</p>
 								      					<p class="summary">${project.metadata.summary}</p>
 								      				</div>
-								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">More Details +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">Preview</a></div>
+								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">詳細說明 +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">預覽</a></div>
 									    		</li>
 									    	</c:forEach>
 									    </ul>
@@ -278,7 +278,7 @@
 										</c:forEach>
 								    </ul>
 							    </div>
-						    </dd>
+						    </dd>						
 						    <dt>生物學</dt>
 						    <dd>
 						    	<div class="tinycarousel">
@@ -290,10 +290,10 @@
 									    			<div class="projectThumb" thumbUrl="${projectThumbMap[project.id]}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 										    		<div class="projectDetails">
 										    			<p class="name">${project.name}</p>
-								      					<p class="metadata">Grades ${project.metadata.gradeRange} | ${project.metadata.totalTime} | ${project.metadata.language}</p>
+								      					<p class="metadata">年級: ${project.metadata.gradeRange} | ${project.metadata.totalTime} 小時| ${project.metadata.language}</p>
 								      					<p class="summary">${project.metadata.summary}</p>
 								      				</div>
-								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">More Details +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">Preview</a></div>
+								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">詳細說明 +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">預覽</a></div>
 									    		</li>
 									    	</c:forEach>
 									    </ul>
@@ -306,6 +306,7 @@
 								    </ul>
 							    </div>
 						    </dd>
+							<!--
 						    <dt>化學</dt>
 						    <dd>
 						    	<div class="tinycarousel">
@@ -317,7 +318,7 @@
 									    			<div class="projectThumb" thumbUrl="${projectThumbMap[project.id]}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 										    		<div class="projectDetails">
 										    			<p class="name">${project.name}</p>
-								      					<p class="metadata">Grades ${project.metadata.gradeRange} | ${project.metadata.totalTime} | ${project.metadata.language}</p>
+								      					<p class="metadata">年級: ${project.metadata.gradeRange} | ${project.metadata.totalTime} 小時| ${project.metadata.language}</p>
 								      					<p class="summary">${project.metadata.summary}</p>
 								      				</div>
 								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">More Details +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">Preview</a></div>
@@ -344,7 +345,7 @@
 									    			<div class="projectThumb" thumbUrl="${projectThumbMap[project.id]}"><img src='/webapp/themes/tels/default/images/projectThumb.png' alt='thumb'></div>
 										    		<div class="projectDetails">
 										    			<p class="name">${project.name}</p>
-								      					<p class="metadata">Grades ${project.metadata.gradeRange} | ${project.metadata.totalTime} | ${project.metadata.language}</p>
+								      					<p class="metadata">年級: ${project.metadata.gradeRange} | ${project.metadata.totalTime} 小時| ${project.metadata.language}</p>
 								      					<p class="summary">${project.metadata.summary}</p>
 								      				</div>
 								      				<div class="projectLink"><a id="projectDetail_${project.id}" class="projectDetail" title="Project Details">More Details +</a><a href="/webapp/previewproject.html?projectId=${project.id}" target="_blank">Preview</a></div>
@@ -360,6 +361,7 @@
 								    </ul>
 							    </div>
 						    </dd>
+							-->
 					   </dl>
 					  </div>
 				</div>
@@ -377,18 +379,19 @@
 				</a>
 				<a id="researchTech" href="/webapp/pages/research-tech.html" class="panelSection">
 					<div class="panelHead"><span>研究與科技</span><span class="panelLink">+</span></div>
-					<div class="panelContent"><img src="/webapp/themes/tels/default/images/home/wise-research.jpg" alt="WISE Research" /></div>
+					<div class="panelContent"><img src="/webapp/themes/tels/default/images/home/wise-research.png" alt="WISE Research" /></div>
 				</a>
 				<div style="clear:both;"></div>
 			</div>
 			
 			<div id="bottomLinks" class="showcase">
 				<div id="telsLink"><a href="http://telscenter.org" target="_blank"><img src="/webapp/themes/tels/default/images/home/tels.png"/></a></div>
-				<div id="telsLinkLabel">Powered by the TELS Community</div>
+				<div id="telsLinkLabel"></div>
+				<div style="text-align:center;"><a href="http://web1.nsc.gov.tw/mp.aspx" target="_blank"><img src="/webapp/themes/tels/default/images/home/Science_Council.png"/></a></div>				
 				<div id="openSourceHeader" class="feature">
 					<span class="featureContent">WISE開放原始碼夥伴</span>
 				</div>
-				<div id="openSourceContent">WISE software is free to use and open source. Visit <a href="http://wise4.org" target="_blank">http://wise4.org</a> to learn about partnership opportunities.</div>
+				<div id="openSourceContent">WISE軟體為開放原始碼且免費使用<br>瀏覽 <a href="http://twise.nknu.edu.tw/VESL/rule.html" target="_blank">VESL</a>獲悉合作夥伴機會</div>
 			</div>
 		</div>
 	</div>

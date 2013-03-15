@@ -1,4 +1,4 @@
-/*
+﻿/*
  * File:        FacetedFilter.js
  * Version:     1.0.1
  * Description: Creates user-defined search and faceted filtering tools for DataTables instances
@@ -861,8 +861,8 @@ FacetedFilter.DEFAULTS = {
 	"sDisplaySide":			"left",
 	"sWidth":				"220px",
 	"bScroll":				true,
-	"sSearchLabel":			"Search",
-	"sFilterLabel":			"Filter By",
+	"sSearchLabel":			"搜尋",
+	"sFilterLabel":			"篩選方式",
 	"sClearSearchLabel":	"Clear",
 	"sClearFilterLabel":	"Show All",
 	'sSearchResultsLabel':	"You searched for:",
